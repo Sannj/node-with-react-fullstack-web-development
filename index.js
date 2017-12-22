@@ -1,5 +1,9 @@
-const express = require('express'); //using common js modules on server side. 
+const express = require('express'); //using common js modules on server side.
+const mongoose = require('mongoose');
 require('./services/passport');
+const keys = require('./config/keys');
+
+mongoose.connect(keys.mongoUri);
 
 const app = express();
 
